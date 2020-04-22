@@ -20,7 +20,7 @@ The application has the next structure :
 | axios            | API requests        |
 | react-apexcharts | chart visualization |
 | react-jss        | CSS-in-JS           |
-| semanti-ui       | css structure       |
+| semantic-ui      | css structure       |
 
 ### `Patterns`
 
