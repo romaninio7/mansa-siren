@@ -17,20 +17,19 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   openModal,
 }) => {
   const maxDataYear = 3;
-  console.log('currentAccount1', currentAccount);
+
   //State to stock a fetched data
   const [chartData, setChartData] = useState<[string, string][]>([]);
 
   // State to hadle a fetching
   const [fetching, setFetching] = useState<boolean>(true);
-  //const [smoozy, setSmoozy] = useState<boolean>(false);
+
   //State to handle an error
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
     if (currentAccount !== '') {
-
-// Preparing the data fetching
+      // Preparing the data fetching
       setFetching(true);
 
       (async function getBusinessData() {
@@ -43,7 +42,6 @@ const Modal: React.FunctionComponent<ModalProps> = ({
 
           // Searching for all date since at most maxDataYear years
           while (iteration <= maxDataYear) {
-
             // Setting up the request parametres
             startDate = getCurrentDayWithOffset(iteration, 1);
             endDate = getCurrentDayWithOffset(iteration - 1, 0);
@@ -73,7 +71,6 @@ const Modal: React.FunctionComponent<ModalProps> = ({
 
           //Saving the fetched data for the chart
           setChartData(fetchedData);
-
         } catch (e) {
           setError(e.toString());
         }
@@ -81,9 +78,6 @@ const Modal: React.FunctionComponent<ModalProps> = ({
     }
   }, [currentAccount]); // memoizing according to currentAccount prop
 
- 
-
-  
   // If user didn't chose an account
   if (currentAccount === '') {
     return null;
@@ -130,8 +124,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
     );
   }
 
-
-// Generatign a modal box
+  // Generatign a modal box
   return ReactDOM.createPortal(
     <div
       onClick={onDismiss}
@@ -147,10 +140,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
         </div>
         <div className='content'>{content}</div>
         <div className='actions'>
-          <button
-            className='ui right labeled icon button'
-            onClick={onDismiss}
-          >
+          <button className='ui right labeled icon button' onClick={onDismiss}>
             <i className='close icon'></i>
             Close
           </button>

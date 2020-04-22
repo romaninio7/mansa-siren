@@ -3,7 +3,6 @@ import mansaAPI from 'api/mansa';
 import _ from 'lodash';
 import { TAccount } from 'types';
 import Account from 'components/Account';
-//import AccountChart from 'components/chart/AccountChart';
 import Modal from 'components/chart/Modal';
 
 const UserFinance = (): JSX.Element => {
