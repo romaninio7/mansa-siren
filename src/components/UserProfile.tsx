@@ -24,11 +24,11 @@ const UserProfile: React.FunctionComponent<UserProfileProps> = ({
           alt='avatar'
         />
         <strong>
-          <span>{faker.name.firstName()}&nbsp;</span>
-          <span>{faker.name.lastName()}</span>
+          <span className='firstName'>{faker.name.firstName()}&nbsp;</span>
+          <span className='lastName'>{faker.name.lastName()}</span>
         </strong>
         <div className='meta'>
-          <span className='date'>{faker.name.jobTitle()}</span>
+          <span className='date jobTitle'>{faker.name.jobTitle()}</span>
         </div>
       </div>
 
@@ -38,7 +38,7 @@ const UserProfile: React.FunctionComponent<UserProfileProps> = ({
       </div>
       <div className='extra content'>
         <i className='phone icon'></i>
-        {faker.phone.phoneNumber()}
+        <span className='phoneNumber'> {faker.phone.phoneNumber()}</span>
       </div>
     </div>
   );

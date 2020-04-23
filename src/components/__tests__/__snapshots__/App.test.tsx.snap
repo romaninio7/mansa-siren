@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders correctly 1`] = `
+<JssContextSubscriber(App)>
+  <WithStyles(App)
+    innerRef={null}
+    jssContext={
+      Object {
+        "classNamePrefix": "",
+        "disableStylesGeneration": false,
+      }
+    }
+    theme={Object {}}
+  >
+    <App
+      classes={
+        Object {
+          "wrapper": "App-wrapper-0-2-1",
+        }
+      }
+    >
+      <div
+        className="App-wrapper-0-2-1"
+      >
+        <JssContextSubscriber(UserProfile)>
+          <WithStyles(UserProfile)
+            innerRef={null}
+            jssContext={
+              Object {
+                "classNamePrefix": "",
+                "disableStylesGeneration": false,
+              }
+            }
+            theme={Object {}}
+          >
+            <UserProfile
+              classes={
+                Object {
+                  "profile": "UserProfile-profile-0-2-2",
+                }
+              }
+            >
+              <div
+                className="ui card centered UserProfile-profile-0-2-2"
+              >
+                <div
+                  className="content header"
+                >
+                  <img
+                    alt="avatar"
+                    className="ui avatar image bordered floated right"
+                    src="https://s3.amazonaws.com/uifaces/faces/twitter/drewbyreese/128.jpg"
+                  />
+                  <strong>
+                    <span
+                      className="firstName"
+                    >
+                      Laurine
+                       
+                    </span>
+                    <span
+                      className="lastName"
+                    >
+                      Schulist
+                    </span>
+                  </strong>
+                  <div
+                    className="meta"
+                  >
+                    <span
+                      className="date jobTitle"
+                    >
+                      Legacy Factors Developer
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="content"
+                >
+                  <h4
+                    className="ui sub header"
+                  >
+                    Business information
+                  </h4>
+                  <UserBusiness>
+                    <div
+                      className="ui active centered inline loader"
+                    />
+                  </UserBusiness>
+                </div>
+                <div
+                  className="extra content"
+                >
+                  <i
+                    className="phone icon"
+                  />
+                  <span
+                    className="phoneNumber"
+                  >
+                     
+                    955.199.5876 x161
+                  </span>
+                </div>
+              </div>
+            </UserProfile>
+          </WithStyles(UserProfile)>
+        </JssContextSubscriber(UserProfile)>
+        <UserFinance>
+          <div
+            className="ui active centered inline loader big"
+          />
+        </UserFinance>
+      </div>
+    </App>
+  </WithStyles(App)>
+</JssContextSubscriber(App)>
+`;

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import sirenAPI from 'api/siren';
 
 interface IBusinessData {
-  siret?: string;
-  startDate?: string;
-  adresse?: string;
+  siret: string;
+  startDate: string;
+  adresse: string;
 }
 
 const UserBusiness = (): JSX.Element => {
@@ -17,7 +17,11 @@ const UserBusiness = (): JSX.Element => {
   //State to handle an error
   const [error, setError] = useState<string>('');
 
+  //State to handle an error
+  const [fetching, setFetching] = useState<boolean>(false);
+
   useEffect(() => {
+    setFetching(true);
     (async function getBusinessData() {
       try {
         const response = await sirenAPI.get(`/${SIREN}`);
@@ -30,6 +34,7 @@ const UserBusiness = (): JSX.Element => {
         };
         // Setting a fetched data
         setBusinessData(fetchedData);
+        setFetching(true);
       } catch (e) {
         setError(e.toString());
       }
@@ -41,7 +46,7 @@ const UserBusiness = (): JSX.Element => {
     return <div className='ui header red centered'>{error}</div>;
   }
   // Loading while businessData is an empty object
-  if (Object.keys(businessData).length === 0) {
+  if (Object.keys(businessData).length === 0 && fetching) {
     return <div className='ui active centered inline loader'></div>;
   }
 
@@ -52,21 +57,21 @@ const UserBusiness = (): JSX.Element => {
           <i className='id badge outline icon'></i>
           SIRET:
         </div>
-        <span> {businessData.siret}</span>
+        <span className='siret'> {businessData.siret}</span>
       </a>
       <a className='item'>
         <div className='ui label teal large horizontal'>
           <i className='icon calendar plus outline'></i>
           Start date:
         </div>
-        <span>{businessData.startDate} </span>
+        <span className='startDate'>{businessData.startDate} </span>
       </a>
       <a className='item'>
         <div className='ui label pink large horizontal'>
           <i className='icon map pin'></i>
           Addresse:
         </div>
-        <span>{businessData.adresse}</span>
+        <span className='adresse'>{businessData.adresse}</span>
       </a>
     </div>
   );

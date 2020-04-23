@@ -33,3 +33,7 @@ Application is using **typescript** with **functional based react components** a
 3.  Finding a solution for animation with JSS;
 4.  Use one useReducer hook instead of several useStates
 5.  Find a chart library with automatic requests to the server in real time that are produced while the user tries to see an ancient data.
+
+### `Run`
+
+Run the application using **yarn start** on **npm run start**
