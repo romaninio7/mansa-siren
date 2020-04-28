@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`sets up a valid data: siret, startDate and adresse 1`] = `
-<div
-  className="ui active centered inline loader big"
-/>
-`;

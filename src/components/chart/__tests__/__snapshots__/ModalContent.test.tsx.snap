@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalContent component rendering has a valid snapshot 1`] = `
+<ModalContent
+  onDismiss={[MockFunction]}
+>
+  <div
+    className="ui dimmer modals visible active  dismiss-click-out"
+    onClick={[MockFunction]}
+  >
+    <div
+      className="ui standard modal visible active large"
+      onClick={[Function]}
+    >
+      <div
+        className="ui header purple"
+      >
+        <i
+          className="icon credit card outline"
+        />
+         Account flow
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="chart"
+        >
+          Test chart
+        </div>
+      </div>
+      <div
+        className="actions"
+      >
+        <button
+          className="ui right labeled icon button dismiss-button"
+          onClick={[MockFunction]}
+        >
+          <i
+            className="close icon"
+          />
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</ModalContent>
+`;

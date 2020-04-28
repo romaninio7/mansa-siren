@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Account component rendering has a valid snapshot 1`] = `
+<Account
+  account_id="afcf2bd0"
+  account_number="26178346"
+  account_type="TRANSACTION"
+  currency="GBP"
+  current="175.52"
+  onAccountSelect={[MockFunction]}
+  onOpenModal={[MockFunction]}
+>
+  <div
+    className="card account-item"
+    onClick={[Function]}
+  >
+    <div
+      className="ui top right attached label account-type purple"
+    >
+      TRANSACTION
+    </div>
+    <div
+      className="content"
+    >
+      <div
+        className="header"
+      >
+        <i
+          className="pound sign  icon"
+        />
+        <span
+          className="current"
+        >
+          175.52
+        </span>
+        <i
+          className="level up alternate green icon"
+        />
+      </div>
+      <div
+        className="description"
+      >
+        <i
+          className="icon credit card outline"
+        />
+         Account: 
+        <strong
+          className="account-number"
+        >
+          26178346
+        </strong>
+      </div>
+    </div>
+    <div
+      className="ui bottom attached button"
+    >
+      <i
+        className="chart line icon"
+      />
+      Details
+    </div>
+  </div>
+</Account>
+`;

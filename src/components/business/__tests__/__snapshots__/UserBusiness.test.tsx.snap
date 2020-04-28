@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserBusiness has a valid shanpshot 1`] = `
+<UserBusiness>
+  <div
+    className="ui divided list large"
+  >
+    <UserBusinessItem
+      businessData={
+        Array [
+          "blue",
+          "briefcase",
+          "Siret",
+          "siret",
+        ]
+      }
+      key="0"
+    >
+      <div
+        className="item"
+      >
+        <div
+          className="ui label large blue"
+        >
+          <i
+            className="id icon briefcase"
+          />
+          <span
+            className="business-name"
+          >
+            Siret
+            : 
+          </span>
+        </div>
+        <span
+          className="siret"
+        />
+      </div>
+    </UserBusinessItem>
+    <UserBusinessItem
+      businessData={
+        Array [
+          "teal",
+          "calendar alternate",
+          "Start date",
+          "startDate",
+        ]
+      }
+      key="1"
+    >
+      <div
+        className="item"
+      >
+        <div
+          className="ui label large teal"
+        >
+          <i
+            className="id icon calendar alternate"
+          />
+          <span
+            className="business-name"
+          >
+            Start date
+            : 
+          </span>
+        </div>
+        <span
+          className="startDate"
+        />
+      </div>
+    </UserBusinessItem>
+    <UserBusinessItem
+      businessData={
+        Array [
+          "pink",
+          "map marker alternate",
+          "Address",
+          "address",
+        ]
+      }
+      key="2"
+    >
+      <div
+        className="item"
+      >
+        <div
+          className="ui label large pink"
+        >
+          <i
+            className="id icon map marker alternate"
+          />
+          <span
+            className="business-name"
+          >
+            Address
+            : 
+          </span>
+        </div>
+        <span
+          className="address"
+        />
+      </div>
+    </UserBusinessItem>
+  </div>
+</UserBusiness>
+`;
