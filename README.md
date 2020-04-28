@@ -4,11 +4,17 @@
 
 The application has the next structure :
 
-| Parent      | Children                  |
-| ----------- | ------------------------- |
-| App         | UserProfile , UserFinance |
-| UserProfile | UserBusinnes              |
-| UserFinance | Account, Modal            |
+| Parent               |
+| -------------------- |
+| App                  |
+| - UserProfile        |
+| -- UserBusiness      |
+| --- UserBusinessItem |
+| - UserFinance        |
+| -- Account           |
+| -- Modal             |
+| --- Chart            |
+| --- ModalContent     |
 
 **UserProfile** shows up some basic user profile information based on FAKER library. It contains **UserBusiness** component which generates an API request to the SIREN server in order do get three parameters: _siret_, _startDate_ and _adresse_.
 **UserFinance** makes an API request on Mansa server in order to get a list of existing user accounts and it shows them up by mapping the **Account** component. **UserFinance** has also the **Modal** component which becomes visible after clicking on one of the accounts. **Modal** component makes an API request on Mansa server in order to get a chart data for several years. After fetching it chows up the data thanks to **Chart** component of _react-apexcharts_ library.
@@ -21,6 +27,8 @@ The application has the next structure :
 | react-apexcharts | chart visualization |
 | react-jss        | CSS-in-JS           |
 | semantic-ui      | css structure       |
+| enzyme           | testing             |
+| storybook        | storybook           |
 
 ### `Patterns`
 
@@ -37,3 +45,11 @@ Application is using **typescript** with **functional based react components** a
 ### `Run`
 
 Run the application using **yarn start** on **npm run start**
+
+### `Test`
+
+Run tests using **yarn test** on **npm run test**
+
+### `Storybook`
+
+Run storybook using **yarn storybook** on **npm run storybook**
