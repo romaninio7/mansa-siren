@@ -1,11 +1,12 @@
-import React from 'react';
+import * as React from 'react';
 import faker from 'faker';
 import withStyles, { WithStylesProps } from 'react-jss';
-import UserBusiness from 'components/UserBusiness';
+
+import UserBusiness from 'components/business/UserBusiness';
 
 const styles = {
   profile: {
-    minWidth: 400,
+    minWidth: 450,
     marginBottom: '40px!important',
   },
 };
@@ -33,7 +34,7 @@ const UserProfile: React.FunctionComponent<UserProfileProps> = ({
       </div>
 
       <div className='content'>
-        <h4 className='ui sub header'>Business information</h4>
+        <h4 className='ui header'>Business information</h4>
         <UserBusiness />
       </div>
       <div className='extra content'>

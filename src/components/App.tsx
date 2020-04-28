@@ -1,7 +1,7 @@
 import * as React from 'react';
 import withStyles, { WithStylesProps } from 'react-jss';
 import UserProfile from 'components/UserProfile';
-import UserFinance from 'components/UserFinance';
+import UserFinance from 'components/finance/UserFinance';
 
 // App styles
 const styles = {

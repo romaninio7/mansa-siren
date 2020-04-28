@@ -20,7 +20,7 @@ export const chartOptions = {
     type: 'gradient',
     gradient: {
       shade: 'dark',
-      gradientToColors: ['#FDD835'],
+      gradientToColors: ['#c62c60'],
       shadeIntensity: 1,
       type: 'horizontal',
       opacityFrom: 1,
