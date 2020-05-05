@@ -21,7 +21,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   onDismiss,
   currentAccount,
   openModal,
-}): React.ReactPortal | JSX.Element => {
+}): React.ReactPortal | JSX.Element | null => {
   const { fetchedData, error, fetching } = useFetch(
     mansaAPI,
     `/${consts.accountsURL}/${currentAccount}/transactions?from=${consts.startDateChart}&to=${consts.endDateChart}`,
@@ -56,13 +56,12 @@ const Modal: React.FunctionComponent<ModalProps> = ({
     );
   }
 
-  // Generatign a modal box
-  return !consts.modalNode || !openModal
-    ? null
-    : ReactDOM.createPortal(
-        <ModalContent onDismiss={onDismiss}>{content}</ModalContent>,
-        consts.modalNode
-      );
+  // Generating a modal box
+  if (!consts.modalNode || !openModal) return null;
+  return ReactDOM.createPortal(
+    <ModalContent onDismiss={onDismiss}>{content}</ModalContent>,
+    consts.modalNode
+  );
 };
 
 export default Modal;
